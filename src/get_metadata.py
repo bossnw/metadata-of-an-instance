@@ -4,9 +4,9 @@ import json
 metadata_url = 'http://169.254.169.254/latest/'
 
 
-def expand_tree(url, arr):
+def expand_tree(url, ini):
     output = {}
-    for item in arr:
+    for item in ini:
         new_url = url + item
         r = requests.get(new_url)
         text = r.text
